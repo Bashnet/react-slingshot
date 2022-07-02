@@ -6,11 +6,6 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run: npm i
-      - save_cache:
-          key: "npm packages"
-          paths: 
-           - /src/node_modules
       - run: npm run lint
   test:
     docker:
